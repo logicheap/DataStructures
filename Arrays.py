@@ -6,6 +6,12 @@ class Arrays:
         self._capacity = 1   #Capacity = total number of blocks reserved for elements
         self._A = _create_array(self._capacity)
 
+    def __getitem__ (self, k):
+        """Return element at index k."""
+        if not 0 <= k < self._n:
+            raise IndexError('invalid index' )
+        return self._A[k]
+    
     def insert(self, obj, index):
         """Add object to the specified index of the array."""
         if self._n == self._capacity:  # not enough room
