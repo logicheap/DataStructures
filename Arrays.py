@@ -16,7 +16,7 @@ class Arrays:
         """Add object to the specified index of the array."""
         if self._n == self._capacity:  # not enough room
             self._resize(2 * self._capacity)  # so double capacity
-        if index >= self._n:
+        if index > self._n:
             raise IndexError('invalid index')
         for i in range(self._n, index, -1):
             self._A[i] = self._A[i - 1]
