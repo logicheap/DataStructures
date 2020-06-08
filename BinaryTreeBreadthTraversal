@@ -37,13 +37,15 @@ class BinaryTree:
 
     def levelorder_traversal(self, root):
         Q = Queue()
-        Q.enqueue(root)
+        if root != None:
+            Q.enqueue(root)
 
         while(not Q.is_empty()):
             temp = Q.dequeue()
-            if(temp != None):
-                print(temp.data)
+            print(temp.data)
+            if temp.left is not None:
                 Q.enqueue(temp.left)
+            if temp.right is not None:
                 Q.enqueue(temp.right)
 
 T = BinaryTree()
