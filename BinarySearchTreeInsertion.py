@@ -43,7 +43,7 @@ class BinarySearchTree:
 
     def insert(self, root, value):
         if root is None:
-            root = Node(value)
+            self.root = Node(value)
         else:
             if root.data < value :
                 if root.right is None:
